@@ -1,1 +1,69 @@
 
+//import java.util.Random;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        double weight;
+        double newWeight;
+        int choice;
+
+        System.out.println("1. KILOGRAM(KG) TO POUNDS(LBS)");
+        System.out.println("2. KILOGRAM(KG) TO OUNCE(OZ)");
+        System.out.println("3. OUNCE(OZ) TO POUNDS(LBS)");
+        System.out.println("4. OUNCE(OZ) TO KILOGRAM(KG)");
+        System.out.println("5. POUND(LBS) TO KILOGRAM(KG)");
+        System.out.println("6. POUND(LBS) TO OUNCE(OZ)");
+        System.out.println("Choose an option :");
+        choice = scanner.nextInt();
+
+        //option1 - kg to lb
+        if(choice == 1){
+            System.out.println("Enter the weight in KG : ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 0.453592;
+            System.out.println("The weight is : " + newWeight + " lb");
+        }
+
+        //option2 - kg to oz
+        if(choice == 2){
+            System.out.println("Enter the weight in KG : ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 35.274;
+            System.out.println("The weight is : " + newWeight + " oz");
+        }
+        //option3 - oz to lb
+        if(choice == 3){
+            System.out.println("Enter the weight in Oz : ");
+            weight = scanner.nextDouble();
+            newWeight = weight / 16;
+            System.out.println("The weight is : " + newWeight + " lb");
+        }
+        //option4 - oz to kg
+        if(choice == 4){
+            System.out.println("Enter the weight in Oz : ");
+            weight = scanner.nextDouble();
+            newWeight = weight / 35.274;
+            System.out.println("The weight is : " + newWeight + " kg");
+        }
+        //option1 - lb to kg
+        if(choice == 5){
+            System.out.println("Enter the weight in Lb : ");
+            weight = scanner.nextDouble();
+            newWeight = weight / 2.20462;
+            System.out.println("The weight is : " + newWeight + " kg");
+        }
+        //option1 - lb to oz
+        if(choice == 6){
+            System.out.println("Enter the weight in Lb : ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 16;
+            System.out.println("The weight is : " + newWeight + " Oz");
+        }
+
+        scanner.close();
+    }
+}
+
+
