@@ -1,1 +1,59 @@
 
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        double temp;
+        double newTemp;
+        int choice;
+
+        System.out.println("1. celcious to farenheit");
+        System.out.println("2. celcious to kelvin");
+        System.out.println("3. farenheit to celcius");
+        System.out.println("4. farenheit to kelvin");
+        System.out.println("5. kelvin to farenheit");
+        System.out.println("6. kelvin to celcius");
+        choice = scanner.nextInt();
+
+        if(choice == 1){
+            System.out.println("enter the temperature : ");
+            temp = scanner.nextDouble();
+            newTemp = (temp * 9/5)+ 32;
+            System.out.println(newTemp);
+        }else if(choice == 2){
+            System.out.println("enter the temperature : ");
+            temp = scanner.nextDouble();
+            newTemp = temp + 273.15;
+            System.out.println(newTemp);
+        }else if(choice == 3){
+            System.out.println("enter the temperature : ");
+            temp = scanner.nextDouble();
+            newTemp = (temp - 32)* 5/9;
+            System.out.println(newTemp);
+        }else if(choice == 4){
+            System.out.println("enter the temperature : ");
+            temp = scanner.nextDouble();
+            newTemp = (temp - 32)* 5/9 + 273.15 ;
+            System.out.println(newTemp);
+        }else if(choice == 5){
+            System.out.println("enter the temperature : ");
+            temp = scanner.nextDouble();
+            newTemp = (temp - 273.15)* 9/5 +32;
+            System.out.println(newTemp);
+        }else if(choice == 6){
+            System.out.println("enter the temperature : ");
+            temp = scanner.nextDouble();
+            newTemp = temp - 273.15;
+            System.out.println(newTemp);
+        }else{
+            System.out.println("Invalid input");
+        }
+
+
+        scanner.close();
+    }
+}
+
+
+
