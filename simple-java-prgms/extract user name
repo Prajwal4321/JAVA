@@ -1,1 +1,38 @@
+import java.util.Scanner;
+public class Main {
+    public static boolean isValid(String email) {
+        return email != null && email.contains("@") && email.indexOf('@') > 0;
+    }
 
+    public static String userid(String email) {
+        return email.substring(0,email.indexOf('@'));
+    }
+
+
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String email = "";
+
+        while(true){
+            System.out.print("Enter your mail id : ");
+            email = scanner.nextLine().trim();
+
+            if(isValid(email)){
+                break;
+            }
+
+            System.out.println("Invalid email !!!");
+        }
+
+
+
+        String userid = userid(email);
+        System.out.print("userid: " + userid);
+
+
+        scanner.close();
+
+    }
+}
