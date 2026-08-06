@@ -91,3 +91,15 @@ public class Main {
     }
 }
 ------------------------------------------------------------------------------
+
+2d array :
+
+String [][] characters ={{"1","2","3"},
+                                {"a","b","c"},
+                                {"@","#","$"}};
+        for(String[] symbs : characters){
+            for(String symb : symbs){
+                System.out.print(symb + " ");
+            }
+            System.out.println();
+----------------------------------------------------------------------------
