@@ -1,1 +1,13 @@
 
+-----------------------simple array methods --------------------------------
+//String[] fruits = {"apple", "orange", "coconut", "banana"};
+
+        //fruits[0] = "pineapple";
+        //int numOfFruits = fruits.length;
+        //Arrays.sort(fruits);
+        //Arrays.fill(fruits, "pineapple");
+        
+       for(String fruit : fruits) {
+           System.out.println(fruit);
+       }
+----------------------------------------------------------------------------
